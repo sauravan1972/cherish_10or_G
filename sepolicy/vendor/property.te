@@ -1,0 +1,5 @@
+# Dirac
+system_public_prop(dirac_prop)
+
+# Fingerprint
+system_public_prop(vendor_fp_prop)

@@ -1,0 +1,45 @@
+# Block devices
+/dev/block/platform/soc/7824900.sdhci/by-name/aboot             u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/cmnlib             u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/cmnlib64             u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/devcfg             u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/dsp             u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/keymaster             u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/lksecapp             u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900\.sdhci/by-name/oem     u:object_r:system_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/rpm             u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/sbl1             u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900\.sdhci/by-name/system   u:object_r:system_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/tz             u:object_r:custom_ab_block_device:s0
+
+# Goodix Fingerprint
+/dev/goodix_fp					u:object_r:gx_fpd_device:s0
+/data/gf_data(/.*)?                             u:object_r:gx_fpd_data_file:s0
+/persist/data/gxfp(/.*)?			u:object_r:gx_fpd_data_file:s0
+
+# Firmware
+/firmware                                                     u:object_r:firmware_file:s0
+/bt_firmware                                                  u:object_r:bt_firmware_file:s0
+/persist(/.*)?                                                u:object_r:mnt_vendor_file:s0
+/mnt/vendor/persist(/.*)?                                     u:object_r:mnt_vendor_file:s0
+
+# HALs
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.G      u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.G     u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.usb@1\.0-service\.G       u:object_r:hal_usb_default_exec:s0
+
+# Input devices
+/(vendor|system/vendor)/usr/idc(/.*)?                         u:object_r:vendor_idc_file:s0
+/(vendor|system/vendor)/usr/keylayout(/.*)?                   u:object_r:vendor_keylayout_file:s0
+
+# Rild
+/(vendor|system/vendor)/radio/qcril_database/qcril.db			u:object_r:rild_file:s0
+
+# Shell Script
+/(vendor|system/vendor)/bin/init\.goodix\.sh	u:object_r:init_fingerprint_exec:s0
+
+# Sys files
+/sys/devices(/platform)?/soc/78b6000\.i2c/i2c-2/2-[0-9a-f]+/leds(/.*)?		u:object_r:sysfs_leds:s0
+/sys/devices(/platform)?/soc/leds-qpnp-[0-9]+/leds(/.*)?				u:object_r:sysfs_leds:s0
+/sys/devices(/platform)?/soc/78b7000\.i2c/i2c-3/3-[0-9a-f]+/enable_dt2w		u:object_r:proc_touchpanel:s0
+/sys/devices(/platform)?/soc/78b7000\.i2c/i2c-3/3-[0-9a-f]+/disable_keys         u:object_r:proc_touchpanel:s0
