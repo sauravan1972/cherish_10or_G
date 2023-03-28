@@ -13,6 +13,7 @@ $(call inherit-product, device/10or/G/device.mk)
 
 # CherishOS specific flags
 TARGET_BOOT_ANIMATION_RES := 1080
+CHERISH_BUILD_TYPE := OFFICIAL
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_FACE_UNLOCK_SUPPORTED := true
@@ -20,7 +21,7 @@ TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_USES_MINI_GAPPS := true
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.cherish.maintainer=Sourav
+    ro.cherish.maintainer=Sourav Pal
 
 # Inherit some common CherishOS stuff.
 $(call inherit-product, vendor/cherish/config/common_full_phone.mk)
